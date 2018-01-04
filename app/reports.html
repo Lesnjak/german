@@ -7,7 +7,7 @@
     <title>Reports</title>
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8">
     <meta property="og:image" content="path/to/image.jpg">
     <link rel="shortcut icon" href="img/favicon/png_fav.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="img/favicon/png_fav.png">
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="libs/fullpage.js/dist/jquery.fullpage.css">
     <link rel="stylesheet" href="libs/slick-master/slick/slick.css">
     <link rel="stylesheet" href="libs/slick-master/slick/slick-theme.css">
+
     <link rel="stylesheet" href="css/main.min.css">
 
 </head>
@@ -99,39 +100,41 @@
 
                         </div>
 <div class="calendar-block">
-    <input id="month-checked" type="checkbox">
-    <input id="year-checked" type="checkbox">
-    <span class="absolute-span">Month</span>
-    <div class="month">
-        <label for="month-checked" class="select-month">
-           2017
-        </label>
-        <ul class="change-month">
-            <li>January</li>
-            <li>Faburary</li>
-            <li>March</li>
-            <li>April</li>
-            <li>May</li>
-            <li>June</li>
-            <li>Julay</li>
 
-        </ul>
+    <form method="get" class="select-form">
+     <div class="year-block select-block old-select">
+    <span>Year</span>
+    <select name="yr" id="edit">
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+        <option value="2015">2015</option>
+        <option value="2014">2014</option>
+        <option value="2013">2013</option>
+    </select>
     </div>
-    <span class="absolute-span1">Year</span>
-    <div class="year">
-        <label for="year-checked" class="select-year">
-            January
-        </label>
-        <ul class="change-year">
-            <li>2017</li>
-            <li>2016</li>
-            <li>2015</li>
-            <li>2014</li>
-            <li>2013</li>
-            <li>2012</li>
-            <li>2011</li>
-        </ul>
-    </div>
+        <div class="month-block select-block old-select">
+            <span>Month</span>
+            <select name="mo" id="edit1" >
+                <option  value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">July</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+        </div>
+        <div class="button-block select-block">
+            <input type="submit" value="Filter">
+        </div>
+
+    </form>
 </div>
                         <div class="reports-item-block">
                             <div class="report-item-item">
@@ -316,34 +319,6 @@
                             </div>
 
                         </div>
-
-
-
-                            <div class="content_detail__pagination cdp" actpage="1">
-                                <a href="#!-1" class="cdp_i">prev</a>
-                                <a href="#!1" class="cdp_i">1</a>
-                                <a href="#!2" class="cdp_i">2</a>
-                                <a href="#!3" class="cdp_i">3</a>
-                                <a href="#!4" class="cdp_i">4</a>
-                                <a href="#!5" class="cdp_i">5</a>
-                                <a href="#!6" class="cdp_i">6</a>
-                                <a href="#!7" class="cdp_i">7</a>
-                                <a href="#!8" class="cdp_i">8</a>
-                                <a href="#!9" class="cdp_i">9</a>
-                                <a href="#!10" class="cdp_i">10</a>
-                                <a href="#!11" class="cdp_i">11</a>
-                                <a href="#!12" class="cdp_i">12</a>
-                                <a href="#!13" class="cdp_i">13</a>
-                                <a href="#!14" class="cdp_i">14</a>
-                                <a href="#!15" class="cdp_i">15</a>
-                                <a href="#!16" class="cdp_i">16</a>
-                                <a href="#!17" class="cdp_i">17</a>
-                                <a href="#!18" class="cdp_i">18</a>
-                                <a href="#!19" class="cdp_i">19</a>
-                                <a href="#!+1" class="cdp_i">next</a>
-                            </div>
-
-
                     </div>
                 </div>
             </div>
@@ -427,6 +402,7 @@
 <script src="libs/slick-master/slick/slick.js"></script>
 <script src="libs/TweenMax.min.js"></script>
 <script src="https://rawgit.com/inuyaksa/jquery.nicescroll/master/jquery.nicescroll.min.js"></script>
+<!--<script src="libs/select2.min.js"></script>-->
 <!--<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>-->
 <!--<script src="libs/fullpage.js/vendors/scrolloverflow.min.js"></script>-->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js"></script>-->

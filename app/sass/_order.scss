@@ -185,6 +185,7 @@
   width: 470px;
   height: 300px;
   display: none;
+  z-index: 300;
   .popup-content{
     position: relative;
     width: 100%;
@@ -235,4 +236,17 @@
 
   }
   
+}
+.blackH{
+  position: relative;
+  &:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.8);
+    z-index: 200;
+  }
 }

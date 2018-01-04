@@ -46,6 +46,14 @@ gulp.task('browser-sync', function() {
 		// tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
 	});
 });
+var imagemin = require('gulp-imagemin');
+
+gulp.task('compress', function() {
+    gulp.src('app/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('build/images'))
+});
+
 
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.scss')
